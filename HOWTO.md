@@ -51,7 +51,7 @@ tmux/screen) is a good idea.
 
 ```sh
 nohup ./c2 -cert innocent.crt -key innocent.key -l 0.0.0.0:443 -csock /var/run/c2.sock >>c2.log 2>&1 &
-
+```
 
 2. Get a victim to beacon back
 ------------------------------
