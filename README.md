@@ -14,9 +14,9 @@ requests.
 
 ```go
 /* TODO: Write real documentation */
-
-Please run it with `-h` for more information.
 ```
+Please run it with `-h` for more information.
+
 The (as-yet rough) [HOWTO](./HOWTO.md) provides a quick guide to getting
 up and running with a minimum of fuss.
 
@@ -67,7 +67,7 @@ Enter an endpoint path or ? to list endpoints.
 > /client_blue/printserv
 /client_blue/printserv> uname -a
 /client_blue/printserv>  -> "uname -a"
-OpenBSD omnia.dmz.stuartsapartment.com 6.1 GENERIC.MP#20 amd64
+OpenBSD printserv.dmz.clientnetwork.com 6.1 GENERIC.MP#20 amd64
 ```
 
 At the moment, output isn't very nice, but it gets the job done.  This is
@@ -116,17 +116,17 @@ Why write something like this when we have Emp[iy]re/Pupy/Meterpreter and so on
 for free?
 
 httprat has the following advantages
-- Simplicity.  A single binary for the server (plus TLS cert and key), a shell
+- Simplicity - A single binary for the server (plus TLS cert and key), a shell
 on-liner on the victim.  Not much to set up, really.
-- Flexibility.  It's easy to write backdoors in whatever language bleds in with
+- Flexibility - It's easy to write backdoors in whatever language bleds in with
 the environment with whatever HTTP/TLS client software won't be caught.
-- Domain fronting.  The C2 server only really inspects the URL path, making it
+- Domain fronting - The C2 server only really inspects the URL path, making it
 easy to put behind larger infrastructure where someone else terminates TLS.
-- FCGI.  Easy to integrate with existing http servers or reverse proxies (say
+- FCGI - Easy to integrate with existing http servers or reverse proxies (say
 to have your compromised hosts call to your clients' internal webserver or fax
 machine).
 
 It's not without its downsides, of course
-- Very limited functionality.  It sends and receives (small amounts) of bytes.
+- Very limited functionality - It sends and receives (small amounts) of bytes.
 'Course, you can probably script up something on top of it.
 - The user interface, it's not pretty.
